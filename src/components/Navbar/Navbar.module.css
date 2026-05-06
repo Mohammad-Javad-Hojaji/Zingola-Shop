@@ -1,0 +1,163 @@
+.Navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: 3px 3px 5px #ddd;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.navbar_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.navnbar_up {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navnbar_up div {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.navnbar_up_up>img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.navnbar_up_up>p {
+    display: inline-block;
+    color: #cf742e;
+    margin-top: 12px;
+
+}
+
+
+
+
+.searchbox {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #777;
+    font-size: 14px;
+    outline: none;
+
+}
+
+.searchbox_Div {
+    position: relative;
+}
+
+.searchbox_Div img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    left: -31px;
+    top: 10px;
+}
+
+.navnbar_up_down img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+
+}
+
+.navnbar_down {
+    margin-top: 10px;
+}
+
+.navnbar_down ul {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .navnbar_down {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border-top: 1px solid #f0f0f1;
+        padding: 10px 20px;
+        width: 100%;
+
+
+    }
+
+    .navnbar_down a {
+        flex-direction: column;
+    }
+
+    .navnbar_down i {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        margin-bottom: 2px;
+    }
+
+    .navnbar_down ul {
+        justify-content: space-between;
+
+    }
+
+    .navnbar_down ul li {
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .navnbar_up_wrapper {
+        flex-direction: column;
+    }
+
+    .navnbar_up_wrapper div {
+        margin: 0;
+    }
+
+    .navnbar_up div {
+        margin: 0;
+    }
+
+    .navnbar_up_down {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+
+    .navnbar_up_down a {
+        margin-top: 18px;
+    }
+
+    .navnbar_up_down img {
+        margin: 0;
+        margin-top: 16px;
+        margin-right: 50px;
+
+    }
+
+}
+
+@media (max-width: 487px) {
+    .searchbox {
+        width: 200px;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .navnbar_up_down a {
+        font-size: 12px;
+    }
+
+    .navnbar_up_down img {
+        margin-top: 20px;
+    }
+}
