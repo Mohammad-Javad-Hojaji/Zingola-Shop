@@ -37,12 +37,9 @@ function Navbar(props) {
         case "contact":
             colorNav.contact = "#111"
             break;
+        default:
 
     }
-    console.log(color);
-
-    console.log(colorNav);
-
     return (
         <div className={styled.Navbar}>
             <div className="container-md">
@@ -62,7 +59,7 @@ function Navbar(props) {
 
                         </div>
                         <div className={styled.navnbar_up_down}>
-                            <img src={shoppingcard} alt="" srcset="" />
+                            <img src={shoppingcard} alt="" />
                             <a href="/" className="btn  btn-outline-primary">ورود | ثبت نام</a>
                         </div>
 

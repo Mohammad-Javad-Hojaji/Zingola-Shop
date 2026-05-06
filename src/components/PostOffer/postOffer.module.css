@@ -1,0 +1,17 @@
+.PostOffer_wrapper{
+    border-radius: 10px;
+    flex-shrink: 0;
+    background-color: #f4e3d0;
+}
+.PostOffer_wrapper:active{
+    cursor: grabbing;
+}
+.PostOffer_wrapper_img{
+    width: 100%;
+    height: 50%;
+}
+.w130{
+    min-width: 200px;
+    height: 400px;
+    position: relative;
+}

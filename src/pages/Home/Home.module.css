@@ -1,9 +1,57 @@
-.poster_wrapper{
+.poster_wrapper {
     padding-top: 140px;
     width: 100%;
-    padding-bottom: 400px;
+    padding-bottom: 50px;
+
 }
-.poster_wrapper img{
+.poster_wrapper img {
     width: 100%;
     height: 100%;
+}
+
+.offer_products_wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+}
+
+
+.offer_products_wrapper>div {
+
+}
+.offer_products_wrapper>div:last-child {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+.arrowright {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: solid 1px #3333;
+    position: absolute;
+    top:18%;
+    right: 7%;
+    background-color: #eee;
+}
+
+.arrowleft {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: solid 1px #3333;
+    position: absolute;
+    top: 18%;
+    left: 7%;
+    background-color: #eee;
+
+}
+
+.offer_products {
+    background: linear-gradient(135deg,#f68f57,#fdc588);
+    position: relative;
 }
