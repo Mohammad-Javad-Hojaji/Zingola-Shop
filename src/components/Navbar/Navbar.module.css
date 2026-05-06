@@ -1,10 +1,12 @@
 .Navbar {
     position: fixed;
+    z-index: 2;
     top: 0;
     right: 0;
     box-shadow: 3px 3px 5px #ddd;
     width: 100%;
     padding-bottom: 10px;
+    background-color: #fff;
 }
 
 .navbar_wrapper {
@@ -91,6 +93,7 @@
         border-top: 1px solid #f0f0f1;
         padding: 10px 20px;
         width: 100%;
+        background-color: #fff;
 
 
     }
