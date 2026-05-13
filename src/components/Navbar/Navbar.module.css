@@ -7,8 +7,13 @@
     width: 100%;
     padding-bottom: 10px;
     background-color: #fff;
-}
+    border-end-end-radius: 50px;
+    transition: 2s;
 
+}
+.Navbar:hover{
+   box-shadow: 10px 3px 8px #bbb; 
+}
 .navbar_wrapper {
     display: flex;
     flex-direction: column;
@@ -53,7 +58,7 @@
     color: #777;
     font-size: 14px;
     outline: none;
-
+    background-color: transparent;
 }
 
 .searchbox_Div {
@@ -83,6 +88,17 @@
 
 .navnbar_down ul {
     display: flex;
+}
+@keyframes circle {
+    0%{
+        transform: translateX(100px);
+    }
+        50%{
+        transform: translate(50px , 20px);
+    }
+        0%{
+        transform: translate(0px);
+    }
 }
 
 @media (max-width: 767px) {

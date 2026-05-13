@@ -14,7 +14,14 @@
     margin-left: 20px;
     color: #777;
     height: 100%;
+    transition: 1s;
 }
 li{
     color: #555;
+    transition: .75s;
+}
+
+.Link:hover li{
+    color: #000;
+    transform: translateY(-2px);
 }

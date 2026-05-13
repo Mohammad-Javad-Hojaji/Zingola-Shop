@@ -9,17 +9,18 @@ import product from "./../../assets/image/product.png"
 import dropdown from "./../../assets/image/dropdown.png"
 import contact from "./../../assets/image/contact.png"
 import info from "./../../assets/image/about.png"
+import { useState } from "react"
 
 
 
 function Navbar(props) {
     let color = props.here
     let colorNav = {
-        home: "#fff",
-        product: "#fff",
-        dastebandi: "#fff",
-        about: "#fff",
-        contact: "#fff",
+        home: null,
+        product: null,
+        dastebandi: null,
+        about: null,
+        contact: null,
     }
     switch (color) {
         case "home":
@@ -40,8 +41,9 @@ function Navbar(props) {
         default:
 
     }
+
     return (
-        <div className={styled.Navbar}>
+        <div className={styled.Navbar} >
             <div className="container-md">
                 <div className={styled.navbar_wrapper}>
 
@@ -60,7 +62,7 @@ function Navbar(props) {
                         </div>
                         <div className={styled.navnbar_up_down}>
                             <img src={shoppingcard} alt="" />
-                            <a href="/" className="btn  btn-outline-primary">ورود | ثبت نام</a>
+                            <a href="/" className="btn  btn-outline-primary btn-t">ورود | ثبت نام</a>
                         </div>
 
                     </div>

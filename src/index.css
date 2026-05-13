@@ -39,3 +39,9 @@ a{
 .color555{
   color: #555;
 }
+.btn-t{
+  transition: 1s;
+}
+.btn-t:hover{
+  color: #fff !important;
+}
