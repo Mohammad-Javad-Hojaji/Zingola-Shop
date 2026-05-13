@@ -1,10 +1,13 @@
 import Navbar from "../../components/Navbar/Navbar"
 import styled from "./Home.module.css"
-import poster from "./../../assets/image/my poster.png"
 import PostOffer from "../../components/PostOffer/PostOffer"
 import arrowright from "./../../assets/image/arrowright.png"
 import arrowleft from "./../../assets/image/arrowleft.png"
 import { useState } from "react"
+import pic1 from "./../../assets/image/clothes.png"
+import pic2 from "./../../assets/image/charger.png"
+import pic3 from "./../../assets/image/dress.png"
+import pic4 from "./../../assets/image/phones.png"
 
 function Home() {
     let all = 9
@@ -15,18 +18,18 @@ function Home() {
         if (right !== 0) {
             setRight(right - 220)
         }
-        if(right === 220){
+        if (right === 220) {
             setDRight("none")
         }
-        
-        
+
+
         setDLeft("inline-block")
     }
     function leftHandeler() {
         if (right !== (all - 1) * 220) {
             setRight(right + 220)
         }
-        if(right === (all - 2)*220){
+        if (right === (all - 2) * 220) {
             setDLeft("none")
         }
         setDRight("inline-block")
@@ -38,9 +41,28 @@ function Home() {
             <Navbar here="home" />
             <div className={styled.poster_wrapper}>
                 <div className="container-md">
-                    <img src={poster} alt="poster site" />
+                    <div>
+                        <h1 className="text-center pt-4 display-2">سایت فروشگاهی زینگولا</h1>
+                        <h2 className="text-center h4 pt-4">زینگولا مرجع بزرگ فروش محصولات الکترونیکی و پوشاک</h2>
+                    </div>
+                    <div className={styled.poster_wrapper_image}>
+                        <div>
+                            <img src={pic1} alt="" />
+                        </div>
+                        <div>
+                            <img src={pic2} alt="" />
+                        </div>
+
+                        <div>
+                            <img src={pic3} alt="" />
+                        </div>
+                        <div>
+                            <img src={pic4} alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div className={styled.offer_products}>
                 <div className="container-md">
                     <h3 className="color555 py-5 mb-5 ms-2">پر تخفیف ترین محصولات</h3>

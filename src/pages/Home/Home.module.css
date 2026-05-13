@@ -1,31 +1,109 @@
 .poster_wrapper {
     padding-top: 140px;
     width: 100%;
+    height: 700px;
     padding-bottom: 50px;
+    background: linear-gradient(130deg, #ff6f00, #b07fee);
+    animation: posteranimatecolor 10s infinite alternate;
+    color: #F0F4FF;
 
 }
-.poster_wrapper img {
-    width: 100%;
-    height: 100%;
+
+.poster_wrapper_image {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: auto;
+    overflow: hidden;
+
 }
 
+.poster_wrapper_image div {
+    animation: posterimage 12s infinite alternate ;
+    min-width: 100%;
+    display: grid;
+    place-items: center;
+    font: 600 24px/1 sans-serif;
+    flex-shrink: 0;
+}
+
+@keyframes posterimage {
+    0% {
+        transform: translateX(0%);
+    }
+
+    20% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(100%);
+    }
+
+    45% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(200%);
+    }
+
+    70% {
+        transform: translateX(200%);
+    }
+
+    75% {
+        transform: translateX(300%);
+    }
+
+    95% {
+        transform: translateX(300%);
+    }
+
+    100% {
+        transform: translateX(300%);
+    }
+}
+
+@keyframes posteranimatecolor {
+    0% {
+        background: linear-gradient(90deg, #f68a37, #b07fee);
+    }
+
+    25% {
+        background: linear-gradient(100deg, #e0792a, rgb(164, 133, 205)a);
+    }
+
+    50% {
+        background: linear-gradient(110deg, #e3853d, #a770ef);
+    }
+
+    75% {
+        background: linear-gradient(130deg, #d3884e, #a06ee2);
+    }
+
+    100% {
+        background: linear-gradient(150deg, #ef8b3e, #9d79cc);
+    }
+}
+.offer_products{
+    margin-top: 10rem;
+}
 .offer_products_wrapper {
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
     scrollbar-width: thin;
+    
 }
 
 
-.offer_products_wrapper>div {
-
-}
 .offer_products_wrapper>div:last-child {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
     justify-content: space-around;
 }
+
 .arrowright {
     cursor: pointer;
     width: 50px;
@@ -33,7 +111,7 @@
     border-radius: 100%;
     border: solid 1px #3333;
     position: absolute;
-    top:18%;
+    top: 18%;
     right: 7%;
     background-color: #eee;
 }
@@ -52,6 +130,21 @@
 }
 
 .offer_products {
-    background: linear-gradient(135deg,#f68f57,#fdc588);
+    background: linear-gradient(135deg, #f68f57, #fdc588);
     position: relative;
+}
+
+@media (max-width: 448px) {
+    .poster_wrapper_image img{
+        
+        width: 200px;
+    
+    }
+    .poster_wrapper_image div{
+        width: 100%;
+    }
+    .poster_wrapper{
+        padding-bottom: 0;
+        height: 600px;
+    }
 }
