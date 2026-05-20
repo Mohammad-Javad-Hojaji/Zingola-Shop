@@ -9,7 +9,7 @@ import product from "./../../assets/image/product.png"
 import dropdown from "./../../assets/image/dropdown.png"
 import contact from "./../../assets/image/contact.png"
 import info from "./../../assets/image/about.png"
-import { useState } from "react"
+
 
 
 
@@ -51,7 +51,7 @@ function Navbar(props) {
                         <div className={styled.navnbar_up_wrapper}>
                             <div className={styled.navnbar_up_up}>
                                 <img src={Icon} alt="icon" />
-                                <p className="h5">زینگولا</p>
+                                <p className="h5 bold">زینگولا</p>
                             </div>
 
                             <div className={styled.searchbox_Div}>

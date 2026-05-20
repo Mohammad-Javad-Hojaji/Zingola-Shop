@@ -11,9 +11,11 @@
     transition: 2s;
 
 }
-.Navbar:hover{
-   box-shadow: 10px 3px 8px #bbb; 
+
+.Navbar:hover {
+    box-shadow: 10px 3px 8px #bbb;
 }
+
 .navbar_wrapper {
     display: flex;
     flex-direction: column;
@@ -89,14 +91,17 @@
 .navnbar_down ul {
     display: flex;
 }
+
 @keyframes circle {
-    0%{
+    0% {
         transform: translateX(100px);
     }
-        50%{
-        transform: translate(50px , 20px);
+
+    50% {
+        transform: translate(50px, 20px);
     }
-        0%{
+
+    0% {
         transform: translate(0px);
     }
 }
@@ -110,7 +115,7 @@
         padding: 10px 20px;
         width: 100%;
         background-color: #fff;
-
+        border-start-end-radius: 50px;
 
     }
 

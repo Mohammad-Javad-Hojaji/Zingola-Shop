@@ -16,9 +16,9 @@ function Home() {
     const [right, setRight] = useState(0)
     function rightHandeler() {
         if (right !== 0) {
-            setRight(right - 220)
+            setRight(right - 212)
         }
-        if (right === 220) {
+        if (right === 212) {
             setDRight("none")
         }
 
@@ -26,10 +26,10 @@ function Home() {
         setDLeft("inline-block")
     }
     function leftHandeler() {
-        if (right !== (all - 1) * 220) {
-            setRight(right + 220)
+        if (right !== (all - 1) * 212) {
+            setRight(right + 212)
         }
-        if (right === (all - 2) * 220) {
+        if (right === (all - 2) * 212) {
             setDLeft("none")
         }
         setDRight("inline-block")
@@ -42,7 +42,7 @@ function Home() {
             <div className={styled.poster_wrapper}>
                 <div className="container-md">
                     <div>
-                        <h1 className="text-center pt-4 display-2">سایت فروشگاهی زینگولا</h1>
+                        <h1 className="text-center pt-4 display-2 bold">سایت فروشگاهی زینگولا</h1>
                         <h2 className="text-center h4 pt-4">زینگولا مرجع بزرگ فروش محصولات الکترونیکی و پوشاک</h2>
                     </div>
                     <div className={styled.poster_wrapper_image}>

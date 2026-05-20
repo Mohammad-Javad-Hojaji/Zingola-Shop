@@ -25,3 +25,9 @@ li{
     color: #000;
     transform: translateY(-2px);
 }
+@media (max-width: 767px) {
+    .Link{
+        margin: 0;
+    }
+
+}

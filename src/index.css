@@ -45,3 +45,6 @@ a{
 .btn-t:hover{
   color: #fff !important;
 }
+.bold{
+  font-family: vazirbold;
+}
