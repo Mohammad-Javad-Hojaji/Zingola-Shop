@@ -2,6 +2,7 @@
     border-radius: 10px;
     flex-shrink: 0;
     background-color: #f4e3d0;
+    min-width: 274px;
 }
 .PostOffer_wrapper:active{
     cursor: grabbing;

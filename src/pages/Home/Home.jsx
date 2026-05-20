@@ -11,12 +11,28 @@ import pic4 from "./../../assets/image/phones.png"
 import Category from "../../components/Category/Category"
 import Category_elect from "./../../assets/image/electronic.png"
 import Category_clothes from "./../../assets/image/clothes icon.png"
+import axios from "axios"
 
 function Home() {
-    let all = 9
     const [dRight, setDRight] = useState("none")
     const [dLeft, setDLeft] = useState("inline-block")
     const [right, setRight] = useState(0)
+    const [postData, setPostData] = useState([])
+    const [all, setAll] = useState(0)
+
+
+
+    useState(() => {
+
+        axios.get("http://localhost:8000/offerProducts").then((data) => {
+            setPostData(data.data.data);
+            setAll(data.data.count)
+
+        })
+    }, [])
+    console.log(postData, all);
+
+
     function rightHandeler() {
         if (right !== 0) {
             setRight(right - 212)
@@ -29,6 +45,10 @@ function Home() {
         setDLeft("inline-block")
     }
     function leftHandeler() {
+        if (all <= 2) {
+            setDLeft("none")
+            return
+        }
         if (right !== (all - 1) * 212) {
             setRight(right + 212)
         }
@@ -37,7 +57,6 @@ function Home() {
         }
         setDRight("inline-block")
     }
-    console.log(right);
 
     return (
         <>
@@ -77,15 +96,15 @@ function Home() {
                             <img src={arrowleft} alt="" className="img-fluid" />
                         </div>
                         <div id="postes" className={styled.postes} style={{ translate: `${right}px` }}>
-                            <PostOffer />
-                            <PostOffer />
-                            <PostOffer />
-                            <PostOffer />
-                            <PostOffer />
-                            <PostOffer />
-                            <PostOffer />
-                            <PostOffer />
-                            <PostOffer />
+                            {
+                                postData.map(offerProduct => {
+                                    return (
+                                        <PostOffer key={offerProduct.id}
+                                            pic={offerProduct.pic} mainPrice={offerProduct.mainPrice}
+                                            name={offerProduct.name} offerPrice={offerProduct.offerPrice} />
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
@@ -94,8 +113,8 @@ function Home() {
                 <div className="container-md pt-5">
                     <h3 className="color555">دسته بندی ها</h3>
                     <div className="row  justify-content-between">
-                        <Category pic={Category_elect} category="الکترونیک" to="/"/>
-                        <Category pic={Category_clothes} category="پوشاک" to="/"/>
+                        <Category pic={Category_elect} category="الکترونیک" to="/" />
+                        <Category pic={Category_clothes} category="پوشاک" to="/" />
                     </div>
                 </div>
             </div>
