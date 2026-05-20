@@ -8,6 +8,9 @@ import pic1 from "./../../assets/image/clothes.png"
 import pic2 from "./../../assets/image/charger.png"
 import pic3 from "./../../assets/image/dress.png"
 import pic4 from "./../../assets/image/phones.png"
+import Category from "../../components/Category/Category"
+import Category_elect from "./../../assets/image/electronic.png"
+import Category_clothes from "./../../assets/image/clothes icon.png"
 
 function Home() {
     let all = 9
@@ -67,10 +70,10 @@ function Home() {
                 <div className="container-md">
                     <h3 className="color555 py-5 mb-5 ms-2">پر تخفیف ترین محصولات</h3>
                     <div className={styled.offer_products_wrapper}>
-                        <div className={styled.arrowright} onClick={rightHandeler} style={{display:dRight}}>
+                        <div className={styled.arrowright} onClick={rightHandeler} style={{ display: dRight }}>
                             <img src={arrowright} alt="" className="img-fluid" />
                         </div>
-                        <div className={styled.arrowleft} onClick={leftHandeler} style={{display:dLeft}}>
+                        <div className={styled.arrowleft} onClick={leftHandeler} style={{ display: dLeft }}>
                             <img src={arrowleft} alt="" className="img-fluid" />
                         </div>
                         <div id="postes" className={styled.postes} style={{ translate: `${right}px` }}>
@@ -84,6 +87,15 @@ function Home() {
                             <PostOffer />
                             <PostOffer />
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className={styled.Categories}>
+                <div className="container-md pt-5">
+                    <h3 className="color555">دسته بندی ها</h3>
+                    <div className="row  justify-content-between">
+                        <Category pic={Category_elect} category="الکترونیک" to="/"/>
+                        <Category pic={Category_clothes} category="پوشاک" to="/"/>
                     </div>
                 </div>
             </div>

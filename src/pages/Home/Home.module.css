@@ -137,7 +137,6 @@
     background: linear-gradient(135deg, #f68f57, #fdc588);
     position: relative;
 }
-
 @media (max-width: 1024px) {
     .arrowleft {
         display: none !important;
