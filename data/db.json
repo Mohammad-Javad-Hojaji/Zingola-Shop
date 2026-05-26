@@ -1,70 +1,87 @@
 {
-    "offerProducts": {
-        "count": 4,
-        "data": [
-            {
-                "id": 1,
-                "pic": "samsung a12.png",
-                "name": "Samsung Galaxy a12",
-                "mainPrice": "30,000,000 تومان",
-                "offerPrice": "27,000,000 تومان"
-            },
-            {
-                "id": 2,
-                "pic": "T-Shirt mark manto.png",
-                "name": "تی شرت xl مارک manto",
-                "mainPrice": "1,000,000 تومان",
-                "offerPrice": "800,000 تومان"
-            },
-            {
-                "id": 3,
-                "pic": "flash memmory 32gig.png",
-                "name": "فلش مموری 32 گیگابایت",
-                "mainPrice": "1,200,000 تومان",
-                "offerPrice": "1,000,000 تومان"
-            },
-            {
-                "id": 4,
-                "pic": "rosari sabz yashmi.png",
-                "name": "روسری زنانه طرح دار",
-                "mainPrice": "800,000 تومان",
-                "offerPrice": "500,000 تومان"
-            }
-        ]
-    },
-    "products": [
-        {
-            "count": 4,
-            "data": [
-                {
-                    "id": 1,
-                    "pic": "samsung a12.png",
-                    "name": "Samsung Galaxy a12",
-                    "mainPrice": "30,000,000 تومان",
-                    "offerPrice": "27,000,000 تومان"
-                },
-                {
-                    "id": 2,
-                    "pic": "T-Shirt mark manto.png",
-                    "name": "تی شرت xl مارک manto",
-                    "mainPrice": "30,000,000 تومان",
-                    "offerPrice": "27,000,000 تومان"
-                },
-                {
-                    "id": 3,
-                    "pic": "flash memmory 32gig.png",
-                    "name": "فلش مموری 32 گیگابایت",
-                    "mainPrice": "30,000,000 تومان",
-                    "offerPrice": "27,000,000 تومان"
-                },
-                {
-                    "id": 4,
-                    "pic": "samsung a12.png",
-                    "name": "Samsung Galaxy a12",
-                    "mainPrice": "30,000,000 تومان",
-                    "offerPrice": "27,000,000 تومان"
-                }
-            ]
-        }
+  "offerProducts": {
+    "count": 4,
+    "data": [
+      {
+        "id": 1,
+        "pic": "samsung a12.png",
+        "name": "Samsung Galaxy a12",
+        "mainPrice": "30,000,000 تومان",
+        "offerPrice": "27,000,000 تومان"
+      },
+      {
+        "id": 2,
+        "pic": "T-Shirt mark manto.png",
+        "name": "تی شرت xl مارک manto",
+        "mainPrice": "1,000,000 تومان",
+        "offerPrice": "800,000 تومان"
+      },
+      {
+        "id": 3,
+        "pic": "flash memmory 32gig.png",
+        "name": "فلش مموری 32 گیگابایت",
+        "mainPrice": "1,200,000 تومان",
+        "offerPrice": "1,000,000 تومان"
+      },
+      {
+        "id": 4,
+        "pic": "rosari sabz yashmi.png",
+        "name": "روسری زنانه طرح دار",
+        "mainPrice": "800,000 تومان",
+        "offerPrice": "500,000 تومان"
+      }
     ]
+  },
+  "products": [
+    {
+      "count": 4,
+      "data": [
+        {
+          "id": 1,
+          "pic": "samsung a12.png",
+          "name": "Samsung Galaxy a12",
+          "mainPrice": "30,000,000 تومان",
+          "offerPrice": "27,000,000 تومان"
+        },
+        {
+          "id": 2,
+          "pic": "T-Shirt mark manto.png",
+          "name": "تی شرت xl مارک manto",
+          "mainPrice": "30,000,000 تومان",
+          "offerPrice": "27,000,000 تومان"
+        },
+        {
+          "id": 3,
+          "pic": "flash memmory 32gig.png",
+          "name": "فلش مموری 32 گیگابایت",
+          "mainPrice": "30,000,000 تومان",
+          "offerPrice": "27,000,000 تومان"
+        },
+        {
+          "id": 4,
+          "pic": "samsung a12.png",
+          "name": "Samsung Galaxy a12",
+          "mainPrice": "30,000,000 تومان",
+          "offerPrice": "27,000,000 تومان"
+        }
+      ]
+    }
+  ],
+  "categories": {
+    "count": 2,
+    "CategoriesShow": [
+      {
+        "id": 1,
+        "categoryName": "الکترونیک",
+        "imgUrl": "electronic.png",
+        "Linkto": ""
+      },
+      {
+        "id": 2,
+        "categoryName": "پوشاک",
+        "imgUrl": "clothes icon.png",
+        "Linkto": ""
+      }
+    ]
+  }
 }

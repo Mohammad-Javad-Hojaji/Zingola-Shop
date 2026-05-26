@@ -9,8 +9,6 @@ import pic2 from "./../../assets/image/charger.png"
 import pic3 from "./../../assets/image/dress.png"
 import pic4 from "./../../assets/image/phones.png"
 import Category from "../../components/Category/Category"
-import Category_elect from "./../../assets/image/electronic.png"
-import Category_clothes from "./../../assets/image/clothes icon.png"
 import axios from "axios"
 
 function Home() {
@@ -19,6 +17,7 @@ function Home() {
     const [right, setRight] = useState(0)
     const [postData, setPostData] = useState([])
     const [all, setAll] = useState(0)
+    const[categoryData,setCategoryData]=useState([])
 
 
 
@@ -29,8 +28,10 @@ function Home() {
             setAll(data.data.count)
 
         })
+        axios.get("http://localhost:8000/categories").then(data=>{
+            setCategoryData(data.data.CategoriesShow)
+        })
     }, [])
-    console.log(postData, all);
 
 
     function rightHandeler() {
@@ -112,9 +113,15 @@ function Home() {
             <div className={styled.Categories}>
                 <div className="container-md pt-5">
                     <h3 className="color555">دسته بندی ها</h3>
-                    <div className="row  justify-content-between">
-                        <Category pic={Category_elect} category="الکترونیک" to="/" />
-                        <Category pic={Category_clothes} category="پوشاک" to="/" />
+                    <div className="row  justify-content-around">
+                        {
+                            categoryData.map(data=>{
+                                return(
+                                    <Category data={data} key={data.key}/>
+                                )
+
+                            })
+                        }          
                     </div>
                 </div>
             </div>
