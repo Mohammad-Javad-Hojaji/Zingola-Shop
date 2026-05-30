@@ -12,9 +12,6 @@ export default function Category(props) {
                     {props.data.categoryName}
                 </Link>
                 <span></span>
-
-
-
             </div>
         </div>
     )

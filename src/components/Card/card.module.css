@@ -1,0 +1,66 @@
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #eaf6f8, #e7def4);
+  border-radius: 10px;
+  border-top: 3px solid #beb3ce;
+  transition:
+    1s border-left,
+    1s border-top,
+    0.5s box-shadow;
+  position: relative;
+}
+
+.card:hover {
+  border-top: 1px solid #e4e2e7;
+  border-left: 3px solid #beb3ce;
+  box-shadow: 3px 3px 7px #beb3ce;
+}
+
+.card img {
+  width: 199px;
+  height: 254px;
+  z-index: 3;
+}
+.card span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #d4d0d9;
+  top: 20%;
+  right: 50%;
+  animation: animatespan 3s infinite alternate;
+  z-index: 2;
+}
+.card p {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #d4d0d9;
+  top: 20%;
+  right: 50%;
+  animation: animatedp 3s 2.5s infinite alternate;
+  z-index: 2;
+}
+@keyframes animatespan {
+  from {
+  }
+  to {
+    top: 50%;
+    right: 70%;
+    scale: 10;
+  }
+}
+@keyframes animatedp {
+  from {
+  }
+  to {
+    top: 50%;
+    right: 25%;
+    scale: 10;
+  }
+}

@@ -10,6 +10,12 @@ import pic3 from "./../../assets/image/dress.png"
 import pic4 from "./../../assets/image/phones.png"
 import Category from "../../components/Category/Category"
 import axios from "axios"
+import { Link } from "react-router-dom"
+import Card from "../../components/Card/Card"
+import Security from "./../../assets/image/security shopping.png"
+import Various_installments from "./../../assets/image/Various installments.png"
+import shoppingCard from "./../../assets/image/shopping card e.png"
+import HighVariety from "./../../assets/image/High variety.png"
 
 function Home() {
     const [dRight, setDRight] = useState("none")
@@ -122,6 +128,21 @@ function Home() {
 
                             })
                         }          
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div className={styled.whyUs}>
+                    <div className="container-md my-5 pt-3">
+                        <h3 className="color555 mb-5">
+                            چرا زینگولا با دیگران متفاوت هست؟!
+                        </h3>
+                        <div className="row">
+                            <Card title={"امنیت در خرید"} pic={Security} alt={"security shopping"}/>
+                            <Card title={" اقساط متنوع "} pic={Various_installments} alt={"Various installments"}/>
+                            <Card title={"راحتی در خرید"} pic={shoppingCard} alt={"Shopping Card"}/>
+                            <Card title={"تنوع بالا"} pic={HighVariety} alt={"High Variety"}/>
+                        </div>
                     </div>
                 </div>
             </div>

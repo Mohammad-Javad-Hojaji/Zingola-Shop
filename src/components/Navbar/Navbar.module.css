@@ -9,6 +9,7 @@
     background-color: #fff;
     border-end-end-radius: 50px;
     transition: 2s;
+    z-index: 50;
 
 }
 
