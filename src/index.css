@@ -48,3 +48,18 @@ a{
 .bold{
   font-family: vazirbold;
 }
+.article{
+  cursor: pointer;
+  transition: 0.5s;
+}
+.article h6{
+  font-size: 12px;
+  text-align: center;
+}
+.article:hover{
+  box-shadow: 5px 20px 10px #494949;
+  transform: translateY(10px);
+}
+.pointer{
+  cursor: pointer;
+}
