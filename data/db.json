@@ -83,5 +83,34 @@
         "Linkto": ""
       }
     ]
+  },
+  "posts": {
+    "count": 4,
+    "favoritePosts": [
+      {
+        "id":1,
+        "imgUrl":"Galaxys article.png",
+        "title":"سری گوش های Galaxy سامسونگ",
+        "subtitle":"در این مقاله شما با سری گوشی های Galaxy سامسونگ اشنا می شوید."
+      },
+            {
+        "id":2,
+        "imgUrl":"vacuum cleaner.png",
+        "title":"برترین مدل های جاروبرقی",
+        "subtitle":"در این مقاله شما با انواع مدل های برتر جاروبرقی اشنا می شوید"
+      },
+                  {
+        "id":3,
+        "imgUrl":"USB.png",
+        "title":"راهنمای خرید USB",
+        "subtitle":"در این مقاله شما با انواع فلش ها  اشنا می شوید"
+      },
+                        {
+        "id":4,
+        "imgUrl":"clothesArticle.png",
+        "title":"خرید لباس شیک مجلسی زنانه",
+        "subtitle":"در این مقاله شما با     طرح های مختلف لباس های  زنانه اشنا می شوید"
+      }
+    ]
   }
 }

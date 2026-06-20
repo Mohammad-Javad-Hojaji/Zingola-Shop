@@ -3,20 +3,20 @@ import styled from "./Home.module.css"
 import PostOffer from "../../components/PostOffer/PostOffer"
 import arrowright from "./../../assets/image/arrowright.png"
 import arrowleft from "./../../assets/image/arrowleft.png"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import pic1 from "./../../assets/image/clothes.png"
 import pic2 from "./../../assets/image/charger.png"
 import pic3 from "./../../assets/image/dress.png"
 import pic4 from "./../../assets/image/phones.png"
 import Category from "../../components/Category/Category"
 import axios from "axios"
-import { Link } from "react-router-dom"
 import Card from "../../components/Card/Card"
 import Security from "./../../assets/image/security shopping.png"
 import Various_installments from "./../../assets/image/Various installments.png"
 import shoppingCard from "./../../assets/image/shopping card e.png"
 import HighVariety from "./../../assets/image/High variety.png"
 import Article from "../../components/Article/Article"
+
 
 function Home() {
     const [dRight, setDRight] = useState("none")
@@ -25,10 +25,10 @@ function Home() {
     const [postData, setPostData] = useState([])
     const [all, setAll] = useState(0)
     const [categoryData, setCategoryData] = useState([])
+    const [articles, setArticles] = useState([])
 
 
-
-    useState(() => {
+    useEffect(() => {
 
         axios.get("http://localhost:8000/offerProducts").then((data) => {
             setPostData(data.data.data);
@@ -37,6 +37,10 @@ function Home() {
         })
         axios.get("http://localhost:8000/categories").then(data => {
             setCategoryData(data.data.CategoriesShow)
+        })
+        axios.get("http://localhost:8000/posts").then(data=>{
+           setArticles(data.data.favoritePosts)
+            
         })
     }, [])
 
@@ -151,10 +155,13 @@ function Home() {
                         <span className="ps-3 h6 text-primary pointer">دیدن موارد بیشتر  &gt;</span>
                     </h3>
                     <div className="row justify-content-between">
-                        <Article />
-                        <Article />
-                        <Article />
-                        <Article />
+                            {
+                                articles.map((article)=>{
+                                    return(
+                                        <Article article={{subtitle:article.subtitle,imgUrl:article.imgUrl,title:article.title}}/>
+                                    )
+                                })
+                            }
                     </div>
                 </div>
             </div>

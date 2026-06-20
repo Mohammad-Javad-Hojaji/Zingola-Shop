@@ -50,6 +50,7 @@ a{
 }
 .article{
   cursor: pointer;
+  min-height: 300px;
   transition: 0.5s;
 }
 .article h6{
