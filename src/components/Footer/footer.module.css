@@ -1,0 +1,19 @@
+
+footer{
+    background-color: #2d2d2dee ;
+    color:#fff;
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.pic{
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+}
+@media (max-width: 765px) {
+    footer{
+        padding-bottom: 50px;
+    }
+}

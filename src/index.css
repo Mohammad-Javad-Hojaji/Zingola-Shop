@@ -64,3 +64,9 @@ a{
 .pointer{
   cursor: pointer;
 }
+.ddd{
+  color: #bbb;
+}
+.ltr{
+  direction: ltr;
+}

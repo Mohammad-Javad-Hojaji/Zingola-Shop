@@ -16,6 +16,7 @@ import Various_installments from "./../../assets/image/Various installments.png"
 import shoppingCard from "./../../assets/image/shopping card e.png"
 import HighVariety from "./../../assets/image/High variety.png"
 import Article from "../../components/Article/Article"
+import Footer from "../../components/Footer/Footer"
 
 
 function Home() {
@@ -166,7 +167,7 @@ function Home() {
                 </div>
             </div>
 
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <Footer />
         </>
     )
 }
