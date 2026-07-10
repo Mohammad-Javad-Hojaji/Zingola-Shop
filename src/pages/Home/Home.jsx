@@ -23,10 +23,10 @@ function Home() {
     const [dRight, setDRight] = useState("none")
     const [dLeft, setDLeft] = useState("inline-block")
     const [right, setRight] = useState(0)
-    const [postData, setPostData] = useState([])
+    const [postData, setPostData] = useState(null)
     const [all, setAll] = useState(0)
     const [categoryData, setCategoryData] = useState([])
-    const [articles, setArticles] = useState([])
+    const [articles, setArticles] = useState(null)
 
 
     useEffect(() => {
@@ -39,11 +39,13 @@ function Home() {
         axios.get("http://localhost:8000/categories").then(data => {
             setCategoryData(data.data.CategoriesShow)
         })
-        axios.get("http://localhost:8000/posts").then(data=>{
-           setArticles(data.data.favoritePosts)
-            
+        axios.get("http://localhost:8000/posts").then(data => {
+            setArticles(data.data.favoritePosts)
+
         })
     }, [])
+
+
 
 
     function rightHandeler() {
@@ -73,6 +75,7 @@ function Home() {
 
     return (
         <>
+
             <Navbar here="home" />
             <div className={styled.poster_wrapper}>
                 <div className="container-md">
@@ -100,25 +103,40 @@ function Home() {
             <div className={styled.offer_products}>
                 <div className="container-md">
                     <h3 className="color555 py-5 mb-5 ms-2">پر تخفیف ترین محصولات</h3>
-                    <div className={styled.offer_products_wrapper}>
-                        <div className={styled.arrowright} onClick={rightHandeler} style={{ display: dRight }}>
-                            <img src={arrowright} alt="" className="img-fluid" />
-                        </div>
-                        <div className={styled.arrowleft} onClick={leftHandeler} style={{ display: dLeft }}>
-                            <img src={arrowleft} alt="" className="img-fluid" />
-                        </div>
-                        <div id="postes" className={styled.postes} style={{ translate: `${right}px` }}>
-                            {
-                                postData.map(offerProduct => {
-                                    return (
-                                        <PostOffer key={offerProduct.id}
-                                            pic={offerProduct.pic} mainPrice={offerProduct.mainPrice}
-                                            name={offerProduct.name} offerPrice={offerProduct.offerPrice} />
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
+
+                    {
+
+                        postData ? (
+                            <div className={styled.offer_products_wrapper}>
+                                <div className={styled.arrowright} onClick={rightHandeler} style={{ display: dRight }}>
+                                    <img src={arrowright} alt="" className="img-fluid" />
+                                </div>
+                                <div className={styled.arrowleft} onClick={leftHandeler} style={{ display: dLeft }}>
+                                    <img src={arrowleft} alt="" className="img-fluid" />
+                                </div>
+                                <div id="postes" className={styled.postes} style={{ translate: `${right}px` }}>
+                                    {
+                                        postData.map(offerProduct => {
+                                            return (
+                                                <PostOffer key={offerProduct.id}
+                                                    pic={offerProduct.pic} mainPrice={offerProduct.mainPrice}
+                                                    name={offerProduct.name} offerPrice={offerProduct.offerPrice} />
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        ) :
+                            (
+                                <div class="d-flex justify-content-center py-5">
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+
+                            )
+                    }
+
                 </div>
             </div>
             <div className={styled.Categories}>
@@ -155,15 +173,27 @@ function Home() {
                     <h3 className="color555">مقالات اخیر
                         <span className="ps-3 h6 text-primary pointer">دیدن موارد بیشتر  &gt;</span>
                     </h3>
-                    <div className="row justify-content-between">
-                            {
-                                articles.map((article)=>{
-                                    return(
-                                        <Article article={{subtitle:article.subtitle,imgUrl:article.imgUrl,title:article.title}}/>
-                                    )
-                                })
-                            }
-                    </div>
+                    {
+                        articles ? (
+                            <div className="row justify-content-between">
+                                {
+                                    articles.map((article) => {
+                                        return (
+                                            <Article article={{ subtitle: article.subtitle, imgUrl: article.imgUrl, title: article.title }} />
+                                        )
+                                    })
+                                }
+                            </div>
+                        ) :
+                            (
+                                <div class="d-flex justify-content-center py-5">
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                </div>
+                            )
+                    }
+
                 </div>
             </div>
 

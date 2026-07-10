@@ -69,7 +69,7 @@ function Navbar(props) {
                     <div className={styled.navnbar_down}>
                         <ul className="m-0 p-0 ">
                             <LinkNavbar color={colorNav.home} to="/" icon={houseIcon} text="خانه" />
-                            <LinkNavbar color={colorNav.product} to="/" icon={product} text="محصولات" />
+                            <LinkNavbar color={colorNav.product} to="/products" icon={product} text="محصولات" />
                             <LinkNavbar color={colorNav.dastebandi} to="/" icon={dropdown} text="دسته بندی ها" />
                             <LinkNavbar color={colorNav.about} to="/" icon={info} text="درباره " />
                             <LinkNavbar color={colorNav.contact} to="/" icon={contact} text="تماس با ما" />
