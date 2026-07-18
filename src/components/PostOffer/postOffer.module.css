@@ -3,6 +3,11 @@
     flex-shrink: 0;
     background-color: #f4e3d0;
     min-width: 274px;
+    transition: 0.5s;
+}
+.PostOffer_wrapper:hover{
+    transform: translateY(-2px);
+    background-color: #f6ddbf;
 }
 .PostOffer_wrapper:active{
     cursor: grabbing;
@@ -16,3 +21,4 @@
     height: 400px;
     position: relative;
 }
+    
