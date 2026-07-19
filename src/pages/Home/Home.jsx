@@ -25,7 +25,7 @@ function Home() {
     const [right, setRight] = useState(0)
     const [postData, setPostData] = useState(null)
     const [all, setAll] = useState(0)
-    const [categoryData, setCategoryData] = useState([])
+    const [categoryData, setCategoryData] = useState(null)
     const [articles, setArticles] = useState(null)
 
 
@@ -128,9 +128,9 @@ function Home() {
                             </div>
                         ) :
                             (
-                                <div class="d-flex justify-content-center py-5">
-                                    <div class="spinner-border" role="status">
-                                        <span class="sr-only"></span>
+                                <div className="d-flex justify-content-center py-5">
+                                    <div className="spinner-border" role="status">
+                                        <span className="sr-only"></span>
                                     </div>
                                 </div>
 
@@ -144,12 +144,20 @@ function Home() {
                     <h3 className="color555">دسته بندی ها</h3>
                     <div className="row  justify-content-around">
                         {
-                            categoryData.map(data => {
-                                return (
-                                    <Category data={data} key={data.key} />
-                                )
+                            categoryData ?
+                                categoryData.map(data => {
+                                    return (
+                                        <Category data={data} key={data.id} />
+                                    )
 
-                            })
+                                }) :
+                                (
+                                    <div className="d-flex justify-content-center py-5">
+                                        <div className="spinner-border" role="status">
+                                            <span className="sr-only"></span>
+                                        </div>
+                                    </div>
+                                )
                         }
                     </div>
                 </div>
@@ -186,9 +194,9 @@ function Home() {
                             </div>
                         ) :
                             (
-                                <div class="d-flex justify-content-center py-5">
-                                    <div class="spinner-border" role="status">
-                                        <span class="sr-only"></span>
+                                <div className="d-flex justify-content-center py-5">
+                                    <div className="spinner-border" role="status">
+                                        <span className="sr-only"></span>
                                     </div>
                                 </div>
                             )

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import arrowright from "./../../assets/image/arrowright.png"
 import arrowleft from "./../../assets/image/arrowleft.png"
 import PostOffer from "../../components/PostOffer/PostOffer"
+import Category from "../../components/Category/Category";
 
 export default function ProductsPage() {
     const [dRight, setDRight] = useState("none")
@@ -12,13 +13,19 @@ export default function ProductsPage() {
     const [right, setRight] = useState(0)
     const [postData, setPostData] = useState(null)
     const [all, setAll] = useState(0)
+    const [categoryData,setCategoryData]=useState(null)
 
     useEffect(() => {
 
         axios.get("http://localhost:8000/offerProducts").then((data) => {
             setPostData(data.data.data);
             setAll(data.data.count)
-
+            
+            
+        })
+        axios.get("http://localhost:8000/categories").then((data) => {
+            setCategoryData(data.data.CategoriesShow);
+            
         })
     }, [])
 
@@ -77,9 +84,9 @@ export default function ProductsPage() {
                             </div>
                         ) :
                             (
-                                <div class="d-flex justify-content-center py-5">
-                                    <div class="spinner-border" role="status">
-                                        <span class="sr-only"></span>
+                                <div className="d-flex justify-content-center py-5">
+                                    <div className="spinner-border" role="status">
+                                        <span className="sr-only"></span>
                                     </div>
                                 </div>
 
@@ -88,7 +95,32 @@ export default function ProductsPage() {
                 </div>
             </div>
 
-            
+            <div className={styled.Categories}>
+                <div className="container-md pt-5">
+                    <h3 className="color555">دسته بندی ها</h3>
+                    <div className="row  justify-content-around">
+                        {
+                            categoryData?
+                            categoryData.map(data => {
+                                
+                                return (
+                                    <Category data={data} key={data.id} />
+                                )
+
+                            }):
+                            (
+                                <div className="d-flex justify-content-center py-5">
+                                    <div className="spinner-border" role="status">
+                                        <span className="sr-only"></span>
+                                    </div>
+                                </div>
+
+                            )
+                        }
+                    </div>
+                </div>
+            </div>
+
 
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </>

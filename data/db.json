@@ -34,50 +34,55 @@
   },
   "products": [
     {
-      "count": 4,
-      "data": [
-        {
-          "id": 1,
-          "pic": "samsung a12.png",
-          "name": "Samsung Galaxy a12",
-          "mainPrice": "30,000,000 تومان",
-          "offerPrice": "27,000,000 تومان"
-        },
-        {
-          "id": 2,
-          "pic": "T-Shirt mark manto.png",
-          "name": "تی شرت xl مارک manto",
-          "mainPrice": "30,000,000 تومان",
-          "offerPrice": "27,000,000 تومان"
-        },
-        {
-          "id": 3,
-          "pic": "flash memmory 32gig.png",
-          "name": "فلش مموری 32 گیگابایت",
-          "mainPrice": "30,000,000 تومان",
-          "offerPrice": "27,000,000 تومان"
-        },
-        {
-          "id": 4,
-          "pic": "samsung a12.png",
-          "name": "Samsung Galaxy a12",
-          "mainPrice": "30,000,000 تومان",
-          "offerPrice": "27,000,000 تومان"
-        }
-      ]
+      "id": 1,
+      "categoryId": 1,
+      "pageCategory":1,
+      "pic": "samsung a12.png",
+      "name": "Samsung Galaxy a12",
+      "mainPrice": "30,000,000 تومان",
+      "offerPrice": "27,000,000 تومان"
+    },
+    {
+      "id": 2,
+      "pageCategory":1,
+      "categoryId": 2,
+      "pic": "T-Shirt mark manto.png",
+      "name": "تی شرت xl مارک manto",
+      "mainPrice": "30,000,000 تومان",
+      "offerPrice": "27,000,000 تومان"
+    },
+    {
+      "id": 3,
+      "pageCategory":1,
+      "categoryId": 1,
+      "pic": "flash memmory 32gig.png",
+      "name": "فلش مموری 32 گیگابایت",
+      "mainPrice": "30,000,000 تومان",
+      "offerPrice": "27,000,000 تومان"
+    },
+    {
+      "id": 4,
+      "pageCategory":1,
+      "categoryId": 2,
+      "pic": "rosari sabz yashmi.png",
+      "name": "روسری زنانه طرح دار",
+      "mainPrice": "800,000 تومان",
+      "offerPrice": "500,000 تومان"
     }
   ],
   "categories": {
     "count": 2,
     "CategoriesShow": [
       {
-        "id": 1,
+        "categoryId": 1,
+        "name": "electoronic",
         "categoryName": "الکترونیک",
         "imgUrl": "electronic.png",
         "Linkto": ""
       },
       {
-        "id": 2,
+        "categoryId": 2,
+        "name": "poshak",
         "categoryName": "پوشاک",
         "imgUrl": "clothes icon.png",
         "Linkto": ""
@@ -88,29 +93,37 @@
     "count": 4,
     "favoritePosts": [
       {
-        "id":1,
-        "imgUrl":"Galaxys article.png",
-        "title":"سری گوش های Galaxy سامسونگ",
-        "subtitle":"در این مقاله شما با سری گوشی های Galaxy سامسونگ اشنا می شوید."
+        "id": 1,
+        "imgUrl": "Galaxys article.png",
+        "title": "سری گوش های Galaxy سامسونگ",
+        "subtitle": "در این مقاله شما با سری گوشی های Galaxy سامسونگ اشنا می شوید."
       },
-            {
-        "id":2,
-        "imgUrl":"vacuum cleaner.png",
-        "title":"برترین مدل های جاروبرقی",
-        "subtitle":"در این مقاله شما با انواع مدل های برتر جاروبرقی اشنا می شوید"
+      {
+        "id": 2,
+        "imgUrl": "vacuum cleaner.png",
+        "title": "برترین مدل های جاروبرقی",
+        "subtitle": "در این مقاله شما با انواع مدل های برتر جاروبرقی اشنا می شوید"
       },
-                  {
-        "id":3,
-        "imgUrl":"USB.png",
-        "title":"راهنمای خرید USB",
-        "subtitle":"در این مقاله شما با انواع فلش ها  اشنا می شوید"
+      {
+        "id": 3,
+        "imgUrl": "USB.png",
+        "title": "راهنمای خرید USB",
+        "subtitle": "در این مقاله شما با انواع فلش ها  اشنا می شوید"
       },
-                        {
-        "id":4,
-        "imgUrl":"clothesArticle.png",
-        "title":"خرید لباس شیک مجلسی زنانه",
-        "subtitle":"در این مقاله شما با     طرح های مختلف لباس های  زنانه اشنا می شوید"
+      {
+        "id": 4,
+        "imgUrl": "clothesArticle.png",
+        "title": "خرید لباس شیک مجلسی زنانه",
+        "subtitle": "در این مقاله شما با     طرح های مختلف لباس های  زنانه اشنا می شوید"
       }
     ]
+  },
+  "ProductInCategory": {
+    "Poshak": {
+      "id": 1
+    },
+    "electronic": {
+      "id": 2
+    }
   }
 }
