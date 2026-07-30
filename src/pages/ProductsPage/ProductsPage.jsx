@@ -1,5 +1,4 @@
 import axios from "axios";
-import Navbar from "../../components/Navbar/Navbar";
 import styled from "./productsPage.module.css"
 import { useEffect, useState } from "react";
 import arrowright from "./../../assets/image/arrowright.png"
@@ -67,7 +66,6 @@ export default function ProductsPage() {
     }
     return (
         <>
-            <Navbar here="product" />
             <div className={styled.offer_products}>
                 <div className="container-md pt-5">
                     <h3 className="text-light h2 py-5 mb-5 ms-2">پر تخفیف ترین محصولات</h3>
@@ -142,7 +140,7 @@ export default function ProductsPage() {
                             {
                                 electronicData ? (
                                     electronicData.map((value) => (
-                                        <div className="col-3">
+                                        <div className="col-12 col-md-6 col-lg-3">
                                             <PricesProdcuts key={value.id} pic={value.pic} name={value.name} mainPrice={value.mainPrice} offerPrice={value.offerPrice} />
                                         </div>
                                     ))
@@ -171,7 +169,7 @@ export default function ProductsPage() {
                             {
                                 poshakData ? (
                                     poshakData.map((value) => (
-                                        <div className="col-3">
+                                        <div className="col-12 col-md-6 col-lg-3">
                                             <PricesProdcuts key={value.id} pic={value.pic} name={value.name} mainPrice={value.mainPrice} offerPrice={value.offerPrice} />
                                         </div>
                                     ))

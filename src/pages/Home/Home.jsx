@@ -1,4 +1,3 @@
-import Navbar from "../../components/Navbar/Navbar"
 import styled from "./Home.module.css"
 import PostOffer from "../../components/PostOffer/PostOffer"
 import arrowright from "./../../assets/image/arrowright.png"
@@ -16,7 +15,7 @@ import Various_installments from "./../../assets/image/Various installments.png"
 import shoppingCard from "./../../assets/image/shopping card e.png"
 import HighVariety from "./../../assets/image/High variety.png"
 import Article from "../../components/Article/Article"
-import Footer from "../../components/Footer/Footer"
+
 
 
 function Home() {
@@ -76,7 +75,7 @@ function Home() {
     return (
         <>
 
-            <Navbar here="home" />
+            
             <div className={styled.poster_wrapper}>
                 <div className="container-md">
                     <div>
@@ -205,7 +204,7 @@ function Home() {
                 </div>
             </div>
 
-            <Footer />
+            
         </>
     )
 }

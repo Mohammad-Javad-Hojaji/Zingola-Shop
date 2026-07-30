@@ -16,26 +16,26 @@ import info from "./../../assets/image/about.png"
 function Navbar(props) {
     let color = props.here
     let colorNav = {
-        home: null,
-        product: null,
-        dastebandi: null,
-        about: null,
-        contact: null,
+        home: "#fff",
+        product: "#fff",
+        dastebandi: "#fff",
+        about: "#fff",
+        contact: "#fff",
     }
     switch (color) {
-        case "home":
+        case "/":
             colorNav.home = "#111"
             break;
-        case "about":
+        case "/about":
             colorNav.about = "#111"
             break;
-        case "product":
+        case "/products":
             colorNav.product = "#111"
             break;
-        case "dastebandi":
+        case "/category":
             colorNav.dastebandi = "#111"
             break;
-        case "contact":
+        case "/contact":
             colorNav.contact = "#111"
             break;
         default:

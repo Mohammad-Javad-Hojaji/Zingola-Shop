@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "./pricesProdcuts.module.css"
 export default function PricesProdcuts(props) {
     return (
-        <Link>
+        <Link className="col-12">
             <div className={styled.w130}>
                 <div className={styled.PostOffer_wrapper}>
                     <div className={styled.PostOffer_wrapper_img} >
